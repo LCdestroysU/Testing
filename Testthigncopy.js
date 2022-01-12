@@ -70,7 +70,7 @@ copyButton.textContent = 'Copy Join Data';
 copyButton.onclick = () => {
     window.axios.get(window.BH.apiUrl('v1/auth/generateToken?set='.concat(stuff.id)))
         .then(function({data}){
-            Clipboard.copy('{"token":"${data.token}","id":"${stuff.id}","port":"${stuff.port}","ip":"${stuff.address}"}');
+            window.Clipboard.copy('{"token":"${data.token}","id":"${stuff.id}","port":"${stuff.port}","ip":"${stuff.address}"}');
         });
 }
 
