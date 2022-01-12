@@ -1,3 +1,17 @@
+// How to use
+
+
+// ==UserScript==
+// @name         Join Data Copier
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @author       Enderspearl184
+// @match        https://*.brick-hill.com/play/*
+// @run-at       document-idle
+// @grant        none
+// ==/UserScript==
+setTimeout(function(){
+
 window.Clipboard = (function(window, document, navigator) {
     var textArea,
         copy;
@@ -43,20 +57,6 @@ window.Clipboard = (function(window, document, navigator) {
         copy: copy
     };
 })(window, document, navigator);
-
-// How to use
-
-
-// ==UserScript==
-// @name         Join Data Copier
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @author       Enderspearl184
-// @match        https://*.brick-hill.com/play/*
-// @run-at       document-idle
-// @grant        none
-// ==/UserScript==
-setTimeout(function(){
 const stuff = {
     address: window.BH.apps.SetPage.$children[0].setIp,
     id: window.BH.apps.SetPage.$children[0].setId,
